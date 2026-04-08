@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SAHANI TRADING COMPANY</title>
+</head>
+<body style="font-family: Arial; padding:20px;">
+
+<h1>SAHANI TRADING COMPANY</h1>
+
+<h2>Products</h2>
+
+<div>
+  <p>Leather Purse - ₹999 <button onclick="add(999)">Add</button></p>
+  <p>Ladies Handbag - ₹1499 <button onclick="add(1499)">Add</button></p>
+  <p>Travel Bag - ₹1999 <button onclick="add(1999)">Add</button></p>
+</div>
+
+<h2>Total: ₹<span id="total">0</span></h2>
+
+<button onclick="checkout()">Checkout</button>
+
+<h2>Payment</h2>
+<p>Scan & Pay UPI</p>
+<img src="https://via.placeholder.com/200" />
+
+<script>
+let total = 0;
+
+function add(price){
+  total += price;
+  document.getElementById("total").innerText = total;
+}
+
+function checkout(){
+  alert("Order Placed! Total ₹" + total);
+}
+</script>
+
+</body>
+</html>
